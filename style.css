@@ -8,18 +8,8 @@ body {
 }
 #container {
   margin: 100px auto;
-  width: 688px;
-}
-#write {
-  margin: 0 0 5px;
-  padding: 5px;
-  width: 671px;
-  height: 200px;
-  font: 1em/1.5 Verdana, Sans-Serif;
-  background: #fff;
-  border: 1px solid #f9f9f9;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
+  width: 697px;
+  box-sizing: border-box;
 }
 #keyboard {
   margin: 0;
@@ -29,10 +19,21 @@ body {
 #keyboard li {
   float: left;
   margin: 0 5px 5px 0;
-  width: 40px;
+  min-width: 40px;
   height: 40px;
   line-height: 40px;
   text-align: center;
+  background: #fff;
+  border: 1px solid #f9f9f9;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+.write {
+  margin: 0 0 5px;
+  padding: 5px;
+  width: 671px;
+  height: 200px;
+  font: 1em/1.5 Verdana, Sans-Serif;
   background: #fff;
   border: 1px solid #f9f9f9;
   -moz-border-radius: 5px;
@@ -62,20 +63,15 @@ body {
 .lastitem {
   margin-right: 0;
 }
-.uppercase {
-  text-transform: uppercase;
-}
 #keyboard .AltLeft,
-#keyboard.Ctrl #keyboard.AltRight,
-#keyboard.Delete {
+#keyboard .Ctrl #keyboard .AltRight {
   width: 47px;
 }
-#keyboard .Space {
-  width: 485px;
+#keyboard .Delete {
+  width: 61px;
 }
-
-.on {
-  display: none;
+#keyboard .Space {
+  width: 465px;
 }
 #keyboard li:hover,
 #keyboard .active {
@@ -90,3 +86,63 @@ body {
   font-size: 12px;
   position: absolute;
 }
+#keyboard .up {
+  margin: -10px 0 0 0px;
+  font-size: 12px;
+  position: absolute;
+}
+#keyboard .up1 {
+  margin: -7px 0 0 24px;
+  font-size: 12px;
+  position: absolute;
+}
+#keyboard sub {
+  margin: 10px 0 0 -20px;
+  font-size: 12px;
+  position: absolute;
+}
+#keyboard .under {
+  margin: 10px 0 0 0px;
+  font-size: 12px;
+  position: absolute;
+}
+#keyboard .under1 {
+  margin: 0px 0 0 24px;
+  font-size: 12px;
+  position: absolute;
+}
+#keyboard .capsl {
+  display: none;
+}
+
+#keyboard .off {
+  color: whitesmoke;
+}
+#keyboard .red {
+  color: red;
+}
+
+#keyboard .onCapsLock {
+  background-color: lightgoldenrodyellow;
+}
+
+.nonactive {
+  pointer-events: none;
+}
+.select{
+  margin-left: 33%;
+  width: 30%;
+  border-radius: 7px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+.check{
+ margin: 5px;
+}
+.legend{
+  text-align: center;
+ }
+
+ #keyboard .delKeySym {
+  background: #eee;
+ } 

@@ -2,74 +2,308 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Online Keyboard</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="shortcut icon" href="Archigraphs-Apples-Keyboard.512.png">
   </head>
   <body>
     <div id="container">
-      <textarea id="write" rows="6" cols="60"></textarea>
+      <fieldset class="select">
+        <legend class="legend"> Select a type of click:</legend>
+        <div class="check">
+          <label> <input type="radio" id="mouse" name="select" value="mouse" checked/>&nbsp;Mouse click</label>
+        </div>
+        <div class="check">   
+          <label> <input type="radio" id="keyboard" name="select" value="keyboard"  />&nbsp;Keyboard click</label>
+        </div>
+      </fieldset>
+      <textarea id="write-mouse" class="write"  rows="6" cols="60" disabled ></textarea>
+      <textarea id="write" class="write"  rows="6" cols="60" hidden></textarea>
       <ul id="keyboard" class="test t2 t3">
-        <li class="symbol Backquote">`<sup>~</sup></li>
-        <li class="symbol Digit1">1<sup>!</sup></li>
-        <li class="symbol Digit2">2 <sup>@</sup></li>
-        <li class="symbol Digit3">3 <sup>#</sup></li>
-        <li class="symbol Digit4">4 <sup>$</sup></li>
-        <li class="symbol Digit5">5 <sup>%</sup></li>
-        <li class="symbol Digit6">6 <sup>^</sup></li>
-        <li class="symbol Digit7">7 <sup>&</sup></li>
-        <li class="symbol Digit8">8 <sup>*</sup></li>
-        <li class="symbol Digit9">9 <sup>(</sup></li>
-        <li class="symbol Digit0">0 <sup>)</sup></li>
-        <li class="symbol Minus">- <sup>_</sup></li>
-        <li class="symbol Equal">=<sup>+</sup></li>
+        <li class="symbol Backquote">
+            <span class='sym en on red'><sub>&nbsp;`</sub></span>
+            <span class='sym en on red'><sup>&nbsp;~</sup></span>
+            <span class="lett ru">ё</span>
+            <span class="lett ru capsl">Ё</span>
+        </li>
+        <li class="symbol Digit1">
+          <span class="symbol">1</span>
+          <sup class="sym en on red">!</sup> 
+          <sup class=" sym up ru">&nbsp;!</sup>
+        </li>
+        <li class="symbol Digit2">
+          <span class="symbol">2</span>
+          <sup class="sym en on red">@</sup> 
+          <sup class=" sym up ru">&nbsp;"</sup>
+        </li>
+        <li class="symbol Digit3">
+          <span class="symbol">3</span>
+          <sup class="sym en on red">#</sup> 
+          <sup class="sym up ru">&nbsp;№</sup>
+        </li>
+        <li class="symbol Digit4">
+          <span class="symbol">4</span>
+          <sup class="sym en on red">$</sup> 
+          <sup class="sym up ru">&nbsp;;</sup>
+        </li>
+        <li class="symbol Digit5">
+          <span class="symbol">5</span>
+          <sup class="sym en on red">%</sup>
+          <sup class="sym up ru">%</sup>
+        </li>
+        <li class="symbol Digit6">
+          <span class="symbol">6</span>
+          <sup class="sym en on red">^</sup>
+          <sup class="sym up ru">&nbsp;:</sup>
+        </li>
+        <li class="symbol Digit7">
+          <span class="symbol">7</span>
+          <sup class="sym en on red">&</sup>
+          <sup class="sym up ru">&nbsp;?</sup>
+        </li>
+        <li class="symbol Digit8">
+          <span class="symbol">8</span>
+          <sup class="sym en on red">*</sup>
+          <sup class="sym up ru">&nbsp;*</sup>
+        </li>
+        <li class="symbol Digit9">
+          <span class="symbol">9</span>
+          <sup class="sym en on red">(</sup>
+          <sup class="sym up ru">&nbsp;(</sup>
+        </li>
+        <li class="symbol Digit0">
+          <span class="sym">0</span>
+          <sup class="on sym en on red">)</sup>
+          <sup class="sym up ru">&nbsp;)</sup>
+        </li>
+        <li class="symbol Minus">
+          <sub>&nbsp;&nbsp;-</sub> 
+          <sup>&nbsp;&nbsp;_</sup>
+        </li>
+        <li class="symbol Equal">
+          <sub>&nbsp;&nbsp;=</sub>
+          <sup>&nbsp;&nbsp;+</sup>
+        </li>
         <li class="delete lastitem Backspace">Backspace</li>
         <li class="tab">Tab</li>
-        <li class="letter q Q">q</li>
-        <li class="letter w W">w</li>
-        <li class="letter e E">e</li>
-        <li class="letter r R">r</li>
-        <li class="letter t T">t</li>
-        <li class="letter y Y">y</li>
-        <li class="letter u U">u</li>
-        <li class="letter i I">i</li>
-        <li class="letter o O">o</li>
-        <li class="letter p P">p</li>
-        <li class="symbol BracketLeft">[ <sup>{</sup></li>
-        <li class="symbol BracketRight">] <sup>}</sup></li>
-        <li class="symbol lastitem Backslash">\ <sup>|</sup></li>
-        <li class="CapsLock">Caps Lock</li>
-        <li class="letter a A">a</li>
-        <li class="letter s S">s</li>
-        <li class="letter d D">d</li>
-        <li class="letter f F">f</li>
-        <li class="letter g G">g</li>
-        <li class="letter h H">h</li>
-        <li class="letter j J">j</li>
-        <li class="letter k K">k</li>
-        <li class="letter l L">l</li>
-        <li class="symbol Semicolon">;<sup>:</sup></li>
-        <li class="symbol Quote">' <sup>"</sup></li>
+        <li class="letter й Й q Q">
+          <span class="lett ru">й</span>
+          <span class="lett ru capsl">Й</span>
+          <span class='lett en on red'><sup>q</sup></span>
+          <span class='lett en on red capsl'><sup>Q</sup></span>
+        </li>
+        <li class="letter w W ц Ц">
+            <span class="lett ru">ц</span>
+            <span class="lett ru capsl">Ц</span>
+            <span class='lett en on red'><sup>w</sup></span>
+            <span class='lett en on red capsl'><sup>W</sup></span>
+        </li>
+        <li class="letter e E у У">
+            <span class="lett ru">у</span>
+            <span class="lett ru capsl">У</span>
+            <span class='lett en on red'><sup>e</sup></span>
+            <span class='lett en on red capsl'><sup>E</sup></span>
+        </li>
+        <li class="letter r R к К">
+            <span class="lett ru">к</span>
+            <span class="lett ru capsl">К</span>
+            <span class='lett en on red'><sup>r</sup></span>
+            <span class='lett en on red capsl'><sup>R</sup></span>
+        </li>
+        <li class="letter t T Е е">
+            <span class="lett ru">е</span>
+            <span class="lett ru capsl">Е</span>
+            <span class='lett en on red'><sup>t</sup></span>
+            <span class='lett en on red capsl'><sup>T</sup></span>
+        </li>
+        <li class="letter y Y н Н">
+            <span class="lett ru">н</span>
+            <span class="lett ru capsl">Н</span>
+            <span class='lett en on red'><sup>y</sup></span>
+            <span class='lett en on red capsl'><sup>Y</sup></span>
+        </li>
+        <li class="letter u U г Г">
+            <span class="lett ru ">г</span>
+            <span class="lett ru capsl">Г</span>
+            <span class='lett en on red'><sup>u</sup></span>
+            <span class='lett en on red capsl'><sup>U</sup></span>
+        </li>
+        <li class="letter i I ш Ш">
+            <span class="lett ru">ш</span>
+            <span class="lett ru capsl">Ш</span>
+            <span class='lett en on red'><sup>i</sup></span>
+            <span class='lett en on red capsl'><sup>I</sup></span>
+          </li>
+        <li class="letter o O Щ щ">
+            <span class="lett ru">щ</span>
+            <span class="lett ru capsl">Щ</span>
+            <span class='lett en on red'><sup>o</sup></span>
+            <span class='lett en on red capsl'><sup>O</sup></span>
+          </li>
+        <li class="letter p P з З">
+            <span class="lett ru">з</span>
+            <span class="lett ru capsl">З</span>
+            <span class='lett en on red'><sup>p</sup></span>
+            <span class='lett en on red capsl'><sup>P</sup></span>
+          </li>
+        <li class="symbol BracketLeft">
+          <span class='sym en on red'><sub>&nbsp;[</sub></span>
+          <span class='sym en on red'><sup>&nbsp;{</sup></span>
+          <span class="lett ru">х</span>
+          <span class="lett ru capsl">Х</span>
+        </li>
+        <li class="symbol BracketRight">
+            <span class='sym en on red'><sub>&nbsp;]</sub></span>
+            <span class='sym en on red'><sup>&nbsp;}</sup></span>
+            <span class="lett ru">ъ</span>
+            <span class=" lett ru capsl">Ъ</span>
+        </li>
+        <li class="symbol lastitem Backslash">
+            <span class='sym en on red'><sub>&nbsp;\</sub></span>
+            <span class='sym en on red'><sup>&nbsp;|</sup></span>
+            <span class="sym ru up">&nbsp;&nbsp;/</span>
+        </li>
+        <li class="CapsLock" id="caps">Caps Lock</li>
+        <li class="letter a A Ф ф">
+            <span class="lett ru">ф</span>
+            <span class="lett ru capsl">Ф</span>
+            <span class='lett en on red'><sup>a</sup></span>
+            <span class='lett en on red capsl'><sup>A</sup></span>
+        </li>
+        <li class="letter s S ы Ы">
+            <span class="lett ru">ы</span>
+            <span class="lett ru capsl">Ы</span>
+            <span class='lett en on red'><sup>s</sup></span>
+            <span class='lett en on red capsl'><sup>S</sup></span>
+        </li>
+        <li class="letter d D В в">
+            <span class="lett ru ">в</span>
+            <span class="lett ru capsl">В</span>
+            <span class='lett en on red'><sup>d</sup></span>
+            <span class='lett en on red capsl'><sup>D</sup></span>
+        </li>
+        <li class="letter f F а А">
+            <span class="lett ru">а</span>
+            <span class="lett ru capsl">А</span>
+            <span class='lett en on red'><sup>f</sup></span>
+            <span class='lett en on red capsl'><sup>F</sup></span>
+        </li>
+        <li class="letter g G П п">
+            <span class="lett ru">п</span>
+            <span class="lett ru capsl">П</span>
+            <span class='lett en on red'><sup>g</sup></span>
+            <span class='lett en on red capsl'><sup>G</sup></span>
+        </li>
+        <li class="letter h H р Р">
+          <span class="lett ru">р</span>
+          <span class="lett ru capsl">Р</span>
+          <span class='lett en on red'><sup>h</sup></span>
+          <span class='lett en on red capsl'><sup>H</sup></span>
+        </li>
+        <li class="letter j J о О">
+          <span class="lett ru">о</span>
+          <span class="lett ru capsl">О</span>
+          <span class='lett en on red'><sup>j</sup></span>
+          <span class='lett en on red capsl'><sup>J</sup></span>
+        </li>
+        <li class="letter k K Л л">
+            <span class="lett ru">л</span>
+            <span class="lett ru capsl">Л</span>
+            <span class='lett en on red'><sup>k</sup></span>
+            <span class='lett en on red capsl'><sup>K</sup></span>
+        </li>
+        <li class="letter l L д Д">
+            <span class="lett ru">д</span>
+            <span class="lett ru capsl">Д</span>
+            <span class='lett en on red'><sup>l</sup></span>
+            <span class='lett en on red capsl'><sup>L</sup></span>
+        </li>
+        <li class="symbol Semicolon ж Ж">
+          <span class="lett ru">ж</span>
+          <span class="lett ru capsl">Ж</span>
+          <span class='sym en on red'><sup>:</sup></span>
+          <span class='sym en on red'><sub>;</sub></span>
+        </li>
+        <li class="symbol Quote э Э">
+            <span class="lett ru">э</span>
+            <span class="lett ru capsl">Э</span>
+            <span class='sym en on red'><sup>"</sup></span>
+            <span class='sym en on red'><sub>'</sub></span>
+        </li>
         <li class="lastitem Enter">Enter &#9094;</li>
-        <li class="ShiftLeft">Shift</li>
-        <li class="letter z Z">z</li>
-        <li class="letter x X">x</li>
-        <li class="letter c C">c</li>
-        <li class="letter v V">v</li>
-        <li class="letter b B">b</li>
-        <li class="letter n N">n</li>
-        <li class="letter m M">m</li>
-        <li class="symbol Comma">, <sup><</sup></li>
-        <li class="symbol Period">.<sup>></sup></li>
-        <li class="symbol Slash">/ <sup>?</sup></li>
-        <li class="ShiftRight lastitem">Shift</li>
-        <li class="Control lastitem">Ctrl</li>
-        <li class="AltLeft lastitem">Alt</li>
+        <li class="ShiftLeft off nonactive delKeySym">Shift</li>
+        <li class="letter z Z я Я">
+            <span class="lett ru">я</span>
+            <span class="lett ru capsl">Я</span>
+            <span class='lett en on red'><sup>z</sup></span>
+            <span class='lett en on red capsl'><sup>Z</sup></span>
+        </li>
+        <li class="letter x X Ч ч">
+            <span class="lett ru">ч</span>
+            <span class="lett ru capsl">Ч</span>
+            <span class='lett en on red'><sup>x</sup></span>
+            <span class='lett en on red capsl'><sup>X</sup></span>
+        </li>
+        <li class="letter c C с С">
+          <span class="lett ru">с</span>
+          <span class="lett ru capsl">С</span>
+          <span class='lett en on red'><sup>c</sup></span>
+          <span class='lett en on red capsl'><sup>C</sup></span>
+        </li>
+        <li class="letter v V М м">
+          <span class="lett ru">м</span>
+          <span class="lett ru capsl">М</span>
+          <span class='lett en on red'><sup>v</sup></span>
+          <span class='lett en on red capsl'><sup>V</sup></span>
+        </li>
+        <li class="letter b B И и">
+            <span class="lett ru">и</span>
+            <span class="lett ru capsl">И</span>
+            <span class='lett en on red'><sup>b</sup></span>
+            <span class='lett en on red capsl'><sup>B</sup></span>
+        </li>
+        <li class="letter n N Т т">
+            <span class="lett ru">т</span>
+            <span class="lett ru capsl">Т</span>
+            <span class='lett en on red'><sup>n</sup></span>
+            <span class='lett en on red capsl'><sup>N</sup></span>
+        </li>
+        <li class="letter m M ь Ь">
+            <span class="lett ru">ь</span>
+            <span class="lett ru capsl">Ь</span>
+            <span class='lett en on red'><sup>m</sup></span>
+            <span class='lett en on red capsl'><sup>M</sup></span>
+        </li>
+        <li class="symbol Comma">
+            <span class="lett ru">б</span>
+            <span class="lett ru capsl">Б</span>
+            <span class='sym en on red'><sup><</sup></span>
+            <span class='sym en on red'><sub>,</sub></span>
+        </li>
+        <li class="symbol Period">
+            <span class="lett ru">ю</span>
+            <span class="lett ru capsl">Ю</span>
+            <span class='sym en on red'><sup>></sup></span>
+            <span class='sym en on red'><sub>.</sub></span>
+        </li>
+        <li class="symbol Slash">
+            <span class='sym en on red'><sup>&nbsp;?</sup></span>
+            <span class='sym en on red'><sub>&nbsp;/</sub></span>
+            <span class='sym ru up1'><sup>&nbsp;,</sup></span>
+            <span class='sym ru under1'><sub>&nbsp;.</sub></span>
+        </li>
+        <li class="ShiftRight lastitem off nonactive delKeySym">Shift</li>
+        <li class="Control lastitem off nonactive delKeySym">Ctrl</li>
+        <li class="AltLeft lastitem off nonactive delKeySym">Alt</li>
         <li class="Space lastitem">&nbsp;</li>
-        <li class="AltRight lastitem">Alt</li>
-        <li class="Delete lastitem">Del</li>
+        <li class="AltRight lastitem off nonactive delKeySym">Alt</li>
+        <li class="Delete lastitem off nonactive delKeySym">Del</li>
       </ul>
     </div>
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="js/scriptChangeLanguage.js"></script>
+    <script type="text/javascript" src="js/scriptMouseClick.js"></script>
+    <script type="text/javascript" src="js/scriptChangeSize.js"></script>
   </body>
 </html>
